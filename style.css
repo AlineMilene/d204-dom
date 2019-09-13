@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    background-color: lightgray;
+}
+
+header{
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+.menu-hamburguer{
+    display: flex;
+    cursor: pointer; /* coloca a maozinha no cursor*/
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(-100px);
+    transition: .8s ease-out;
+    position: relative;
+    z-index: -1;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+span{
+    background-color: white;
+    display: flex;
+    height: 3px;
+    width: 100%;
+}
+
+.traco-1, .traco-3{
+    transform-origin: right center;
+    transition: .6s;
+}
+
+.ativo .traco-1{
+    transform: rotate(-45deg);
+}
+
+.ativo .traco-2{
+    opacity: 0;
+}
+
+.ativo .traco-3{
+    transform: rotate(45deg);
+}
+
+.visivel{
+    transform: translateX(0);
+}
